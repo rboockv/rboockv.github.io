@@ -2,6 +2,7 @@ import { useCallback  } from 'react';
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import linkedinLogo from '../assets/LI-In-Bug.png'
+import particlesConfig from '../assets/particles.json'
 
 function Root() {
     const particlesInit = useCallback(async engine => {
@@ -14,7 +15,7 @@ function Root() {
       <>
       <div className='main-container'>
         <div className='particles-container'>
-          <Particles id="tsparticles" url="src/assets/particles.json" init={particlesInit} loaded={particlesLoaded} />
+          <Particles id="tsparticles" options={particlesConfig} init={particlesInit} loaded={particlesLoaded} />
         </div>
         <div className='info-container'>
           <h1>Sitio web en mantenimiento</h1>
